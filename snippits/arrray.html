@@ -8,5 +8,27 @@
 </head>
 <body>
     
+    <input type="text" id="person">
+    <input type="button" id="btn" value="remove"> <br> <br><br>
+    <span id="result"></span> 
+    <script>
+         let people=["rajesh","middivenuka","mouni"]
+         let result=document.getElementById("result");
+         result.innerHTML=people;
+         let btn=document.getElementById("btn");
+         btn.onclick=removeElements;
+         function removeElements(){
+            let p=document.getElementById("person");
+            let person=p.value;
+            console.log(person);
+            let index=people.indexOf(person)
+            console.log(index);
+            if(index > -1){
+                people.splice(index,1)
+                console.log( people.splice(index,1))
+            }
+            result.innerText=people;
+         }
+    </script>
 </body>
 </html>
