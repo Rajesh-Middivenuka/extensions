@@ -11,7 +11,13 @@
     <input type="text" id="person">
     <input type="button" id="btn" value="remove"> <br> <br><br>
     <span id="result"></span> 
+    <p id="text"></p>
+    
     <script>
+        text.style.background="orage"
+        let ele=document.getElementById("text")
+        console.log(ele);
+        ele.style.background="blue";
          let people=["rajesh","middivenuka","mouni"]
          let result=document.getElementById("result");
          result.innerHTML=people;
